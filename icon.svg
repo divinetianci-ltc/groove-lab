@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="110" fill="#101211"/><circle cx="256" cy="256" r="150" fill="#c8f45a"/><text x="256" y="300" text-anchor="middle" font-family="Arial" font-size="130" font-weight="900" fill="#101510">GL</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="128" fill="#101211"/>
+  <circle cx="256" cy="256" r="172" fill="#c8f45a"/>
+  <path d="M153 176h53l50 137 50-137h53l-77 190h-52z" fill="#101211"/>
+  <circle cx="158" cy="151" r="25" fill="#ff8a5c"/>
+  <circle cx="354" cy="151" r="25" fill="#ff8a5c"/>
+</svg>

@@ -1,1 +1,20 @@
-{"name":"Groove Lab","short_name":"Groove Lab","start_url":"./","display":"standalone","background_color":"#101211","theme_color":"#101211","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml"}]}
+{
+  "name": "Groove Lab 鼓循环创作器",
+  "short_name": "Groove Lab",
+  "description": "两小节鼓循环创作器，支持五个鼓件及三档真实采样音色导入",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#101211",
+  "theme_color": "#101211",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

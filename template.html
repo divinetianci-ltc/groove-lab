@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101211"><meta name="description" content="一条四小节鼓循环，先选节奏再点音符，三档力度、Double 和直接小节复制。">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Groove Lab"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>Groove Lab · 四小节单行编辑</title>
+<style>/* STYLES */</style>
+</head>
+<body>
+<div class="app">
+  <header><div class="brand"><div class="logo">GL</div><div><h1>GROOVE LAB</h1><p>每一拍，都可以有自己的律动</p></div></div><div class="top-actions"><button class="soft-btn" id="copy">复制链接</button><button class="soft-btn" id="soundSettings">音色</button></div></header>
+  <main>
+    <section class="transport">
+      <div class="player-core" id="playerDock">
+      <button class="play" id="play" aria-label="播放"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+      <div class="tempo"><div class="tempo-top"><label for="tempo">速度</label><div><span class="bpm" id="bpmText">90</span> <small>BPM</small></div></div><input id="tempo" type="range" min="40" max="220" step="5" value="90"></div>
+      </div>
+      <div class="switches"><button class="toggle active" id="loop" aria-pressed="true">循环</button><button class="toggle" id="metro" aria-pressed="false">节拍器</button><button class="toggle" id="listenPractice" aria-pressed="false">听练交替</button></div>
+    </section>
+    <div class="workspace-head"><div><h2>四小节 · 一条律动</h2><p>先选节奏，再点音符 · 左右滑动看四小节</p></div><div class="phase-badge" id="phaseBadge" hidden></div></div>
+    <section class="rhythm-panel" id="rhythmPanel" aria-label="选择节奏">
+      <div class="rhythm-context"><strong id="selectedPosition">第 1 小节 · 第 1 拍</strong><button class="scope-toggle" id="scopeToggle" aria-expanded="false" aria-controls="rangeButtons">半拍选项</button><div class="range-buttons" id="rangeButtons" role="group" aria-label="编辑范围"><button class="range-btn active" data-range="beat" aria-pressed="true">整拍</button><button class="range-btn" data-range="left" aria-pressed="false">前半拍</button><button class="range-btn" data-range="right" aria-pressed="false">后半拍</button></div></div>
+      <div class="rhythm-options" id="rhythmOptions" role="group" aria-label="节奏类型"><button class="rhythm-btn" data-rhythm="1" aria-pressed="false">4 分</button><button class="rhythm-btn" data-rhythm="2" aria-pressed="false">8 分</button><button class="rhythm-btn" data-rhythm="4" aria-pressed="false">16 分</button><button class="rhythm-btn" data-rhythm="3" aria-pressed="false">3 连</button><button class="rhythm-btn" data-rhythm="6" aria-pressed="false">6 连</button><button class="soft-btn rhythm-all" id="applyBarRhythm" disabled>本小节用此节奏</button></div>
+      <p class="rhythm-help" id="rhythmHelp">先选上方节奏，再点下方音符。未设置的拍会使用你刚选的节奏。</p>
+    </section>
+    <div class="editing-toolbar"><div class="editor-tools"><button class="roll-btn" id="rollMode" aria-pressed="false">Double 双击</button><button class="soft-btn" id="copyBarsToggle" aria-expanded="false">复制小节</button><button class="soft-btn" id="undo" disabled>撤销</button><button class="soft-btn" id="clear">清空</button></div><div class="legend"><span class="key"><i class="dot accent"></i>重音</span><span class="key"><i class="dot normal"></i>常规</span><span class="key"><i class="dot ghost"></i>鬼音</span></div></div>
+    <div class="copy-panel" id="barCopyPanel" hidden><div class="copy-line"><label for="copyFrom">从</label><select id="copyFrom" aria-label="复制来源小节"><option value="0">第 1 小节</option><option value="1">第 2 小节</option><option value="2">第 3 小节</option><option value="3">第 4 小节</option></select><span>复制到</span><button class="soft-btn" id="closeBarCopy">完成</button></div><div class="copy-targets" id="copyTargets"><button class="soft-btn copy-target" data-target="0">第 1 小节</button><button class="soft-btn copy-target" data-target="1">第 2 小节</button><button class="soft-btn copy-target" data-target="2">第 3 小节</button><button class="soft-btn copy-target" data-target="3">第 4 小节</button><button class="soft-btn copy-target" data-target="all">其余全部</button></div><p>点目标就复制。覆盖原内容后，可以撤销。</p></div>
+    <p class="hint" id="hint">点击：常规 → 重音 → 鬼音 → 关闭；开启 Double 后点击添加或取消双击。</p>
+    <p class="edit-message" id="editMessage" role="status" aria-live="polite"></p>
+    <div class="timeline-nav" id="barNav" aria-label="跳到小节"><span>跳到</span><button class="bar-jump" data-bar="0">小节 1</button><button class="bar-jump" data-bar="1">小节 2</button><button class="bar-jump" data-bar="2">小节 3</button><button class="bar-jump" data-bar="3">小节 4</button></div>
+    <div id="bars"><p class="hint">正在打开编辑区…</p></div>
+    <noscript><p class="edit-message">当前预览不支持交互。请下载此 HTML 文件，用 Chrome、Edge 或 Safari 打开。</p></noscript>
+    <p class="sound-status" id="soundStatus" role="status">Main Room 八件鼓 · 24 个真实采样已内置</p>
+    <div class="bottom"><div class="hint">四小节沿同一条横向滑动 · 播放前一小节预备拍</div><div class="patterns"><label for="preset">快速开始</label><select id="preset"><option value="blank" selected>空白节奏</option><option value="basic">基础 Rock</option><option value="funk">Funk Pocket</option><option value="halftime">Half-time</option></select></div></div>
+  </main>
+  <footer>Groove Lab · 4/4 · 为编写、讲解与练习鼓节奏而设计</footer>
+</div>
+<dialog class="sound-dialog" id="soundDialog" aria-labelledby="soundTitle">
+  <div class="sound-head"><h2 id="soundTitle">鼓音色 · 三档采样</h2><button class="soft-btn sound-close" id="closeSound" aria-label="关闭音色设置">×</button></div>
+  <p class="sound-help">八件鼓全部使用你这次导出的 Main Room 真实采样，每件弱、中、强三档。弱音来自 MIDI 力度 25 的录音，并保留当前版本的轻鬼音增益；常规与重音对应 85、120。Double 使用同档声音。</p>
+  <div class="sample-table" id="sampleTable"></div>
+  <div class="sound-actions"><label class="soft-btn batch-label">批量导入<input class="batch-input" id="soundFiles" type="file" multiple accept=".wav,.mp3,.ogg,.m4a,.flac,audio/*"></label><button class="soft-btn" id="resetSound">恢复默认鼓组</button></div>
+  <p class="sound-help">单次采样：不超过 8 MB / 12 秒。文件名如 kick-weak.wav、rack2-medium.wav、ride-strong.wav、crash-strong.wav。也支持 hat、rack、snare、floor。音色只保存在当前浏览器，节奏链接不携带音频。.obw 不能直接导入。</p>
+  <p class="sound-message" id="soundMessage" role="status" aria-live="polite">八件鼓的 24 个真实采样已全部内置，包含通鼓 2、叮叮镲和强音镲。</p>
+</dialog>
+<!-- SAMPLE_DATA -->
+<script>// SCRIPT</script>
+</body></html>

@@ -1,0 +1,32 @@
+Groove Lab 使用说明
+
+手机和电脑在线使用：
+https://divinetianci-ltc.github.io/groove-lab/
+
+电脑离线包下载：
+https://divinetianci-ltc.github.io/groove-lab/download.html
+
+Windows 电脑：
+1. 下载 groove-lab-mainroom.zip。
+2. 在电脑上右键 ZIP，选择“全部解压缩”。
+3. 打开解压后的文件夹，双击 Start-Groove-Lab.cmd。
+
+启动文件会自动用 Edge 或 Chrome 打开 index.html，不需要安装。
+请先完整解压，再启动。启动文件和 index.html 必须在同一文件夹。
+
+如果不运行启动文件：
+打开 Edge 或 Chrome，按 Ctrl+O，选择解压后的 index.html。
+
+聊天里的 HTML 附件预览可能显示源码。
+看到 <!doctype html>、<head> 等文字，说明打开的是文件预览。
+按上面的步骤在浏览器中打开，即可看到鼓节奏编辑界面。
+
+浏览器打开后：
+先选上方的 4 分、8 分、16 分、3 连或 6 连，再点击音符格。
+首次点击播放会载入 24 个真实鼓采样。使用时不需要联网。
+
+手机请用 Safari 或 Chrome 打开上方 HTTPS 网址。
+iPhone 可通过“分享 → 添加到主屏幕”创建应用图标。
+网页版首次完整播放后会缓存鼓音色，可再次离线打开；系统清理缓存后需要重新联网。
+Windows 启动文件不适用于手机。手机系统的本地文件预览可能不支持网页交互。
+发布说明见 GITHUB-PUBLISHING.md。

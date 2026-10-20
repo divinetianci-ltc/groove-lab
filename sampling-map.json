@@ -1,0 +1,218 @@
+[
+  {
+    "order": 1,
+    "lane": "kick",
+    "level": "weak",
+    "velocity": 25,
+    "note": 36,
+    "seconds": 2,
+    "filename": "kick-weak.wav"
+  },
+  {
+    "order": 2,
+    "lane": "kick",
+    "level": "medium",
+    "velocity": 85,
+    "note": 36,
+    "seconds": 14,
+    "filename": "kick-medium.wav"
+  },
+  {
+    "order": 3,
+    "lane": "kick",
+    "level": "strong",
+    "velocity": 120,
+    "note": 36,
+    "seconds": 26,
+    "filename": "kick-strong.wav"
+  },
+  {
+    "order": 4,
+    "lane": "snare",
+    "level": "weak",
+    "velocity": 25,
+    "note": 38,
+    "seconds": 38,
+    "filename": "snare-weak.wav"
+  },
+  {
+    "order": 5,
+    "lane": "snare",
+    "level": "medium",
+    "velocity": 85,
+    "note": 38,
+    "seconds": 50,
+    "filename": "snare-medium.wav"
+  },
+  {
+    "order": 6,
+    "lane": "snare",
+    "level": "strong",
+    "velocity": 120,
+    "note": 38,
+    "seconds": 62,
+    "filename": "snare-strong.wav"
+  },
+  {
+    "order": 7,
+    "lane": "hat",
+    "level": "weak",
+    "velocity": 25,
+    "note": 42,
+    "seconds": 74,
+    "filename": "hat-weak.wav"
+  },
+  {
+    "order": 8,
+    "lane": "hat",
+    "level": "medium",
+    "velocity": 85,
+    "note": 42,
+    "seconds": 86,
+    "filename": "hat-medium.wav"
+  },
+  {
+    "order": 9,
+    "lane": "hat",
+    "level": "strong",
+    "velocity": 120,
+    "note": 42,
+    "seconds": 98,
+    "filename": "hat-strong.wav"
+  },
+  {
+    "order": 10,
+    "lane": "rack",
+    "level": "weak",
+    "velocity": 25,
+    "note": 48,
+    "seconds": 110,
+    "filename": "rack-weak.wav"
+  },
+  {
+    "order": 11,
+    "lane": "rack",
+    "level": "medium",
+    "velocity": 85,
+    "note": 48,
+    "seconds": 122,
+    "filename": "rack-medium.wav"
+  },
+  {
+    "order": 12,
+    "lane": "rack",
+    "level": "strong",
+    "velocity": 120,
+    "note": 48,
+    "seconds": 134,
+    "filename": "rack-strong.wav"
+  },
+  {
+    "order": 13,
+    "lane": "rack2",
+    "level": "weak",
+    "velocity": 25,
+    "note": 47,
+    "seconds": 146,
+    "filename": "rack2-weak.wav"
+  },
+  {
+    "order": 14,
+    "lane": "rack2",
+    "level": "medium",
+    "velocity": 85,
+    "note": 47,
+    "seconds": 158,
+    "filename": "rack2-medium.wav"
+  },
+  {
+    "order": 15,
+    "lane": "rack2",
+    "level": "strong",
+    "velocity": 120,
+    "note": 47,
+    "seconds": 170,
+    "filename": "rack2-strong.wav"
+  },
+  {
+    "order": 16,
+    "lane": "floor",
+    "level": "weak",
+    "velocity": 25,
+    "note": 43,
+    "seconds": 182,
+    "filename": "floor-weak.wav"
+  },
+  {
+    "order": 17,
+    "lane": "floor",
+    "level": "medium",
+    "velocity": 85,
+    "note": 43,
+    "seconds": 194,
+    "filename": "floor-medium.wav"
+  },
+  {
+    "order": 18,
+    "lane": "floor",
+    "level": "strong",
+    "velocity": 120,
+    "note": 43,
+    "seconds": 206,
+    "filename": "floor-strong.wav"
+  },
+  {
+    "order": 19,
+    "lane": "ride",
+    "level": "weak",
+    "velocity": 25,
+    "note": 51,
+    "seconds": 218,
+    "filename": "ride-weak.wav"
+  },
+  {
+    "order": 20,
+    "lane": "ride",
+    "level": "medium",
+    "velocity": 85,
+    "note": 51,
+    "seconds": 230,
+    "filename": "ride-medium.wav"
+  },
+  {
+    "order": 21,
+    "lane": "ride",
+    "level": "strong",
+    "velocity": 120,
+    "note": 51,
+    "seconds": 242,
+    "filename": "ride-strong.wav"
+  },
+  {
+    "order": 22,
+    "lane": "crash",
+    "level": "weak",
+    "velocity": 25,
+    "note": 49,
+    "seconds": 254,
+    "filename": "crash-weak.wav"
+  },
+  {
+    "order": 23,
+    "lane": "crash",
+    "level": "medium",
+    "velocity": 85,
+    "note": 49,
+    "seconds": 266,
+    "filename": "crash-medium.wav"
+  },
+  {
+    "order": 24,
+    "lane": "crash",
+    "level": "strong",
+    "velocity": 120,
+    "note": 49,
+    "seconds": 278,
+    "filename": "crash-strong.wav"
+  }
+]
